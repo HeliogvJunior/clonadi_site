@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>## { Casa da Naná } ##</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="includes/css/layout.css" />
+        <link rel="stylesheet" href="includes/css/jquery-ui-1.10.3.custom.min.css" />
+        <script type="text/javascript" src="includes/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="includes/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#inicio").button({
+                    icons: {
+                        primary: 'ui-icon-home'
+                    }
+                });
+                $("#fotos").button({
+                    icons: {
+                        primary: 'ui-icon-image'
+                    }
+                });
+                $("#info").button({
+                    icons: {
+                        primary: 'ui-icon-info'
+                    }
+                });
+                $("#mapa").button({
+                    icons: {
+                        primary: 'ui-icon-flag'
+                    }
+                });
+                $("#contato").button({
+                    icons: {
+                        primary: 'ui-icon-mail-closed'
+                    }
+                });
+                
+            });
+        </script>
+        <style type="text/css">
+
+        </style>
+    </head>
+    <body>
+        <div id="site">
+            <div id="topo">
+                <img src="imagens/logo.png" width="781" height="206" >
+            </div>
+            <div id="conteudo"> 
+                <div id="menu">
+                    <button id="inicio"><a href="index.html">Início</a></button>
+                    <button id="fotos">Fotos</button>
+                    <button id="info">Informações</button>
+                    <button id="mapa">Mapa</button>
+                    <button id="contato"><a href="contato.html">Contato</a></button>
+                </div>
+                <div id="principal"> 
+                    <?php include ("home.php"); ?>
+                    fogo
+                </div>
+            </div>
+            <div id="clear">&nbsp; </div> 
+            <div id="rodape">Casa da Naná - Copyright &copy; 2013. Todos os direitos reservados.</div>
+            <div class="canto"><img src="imagens/logo_hachiinfo.png"></div>
+        </div>
+    </body>
+</html>

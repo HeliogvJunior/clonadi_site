@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]*)/([^/]*)/([^/]*).html$ /inicio.php?menu=$1&comando=$2&pg=$3&%{QUERY_STRING} [L]
+
+#Change default directory page
+DirectoryIndex manutencao.html
+#DirectoryIndex index.php
+
+#Prevent viewing of .htaccess file
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+#Prevent directory listings
+Options All -Indexes
+
+<Files magic>
+ForceType application/x-httpd-php5
+</Files>

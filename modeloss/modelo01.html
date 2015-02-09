@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>## Clonadi ##</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="../includes/css/jquery-ui-1.10.3.custom.min.css" />
+        <script type="text/javascript" src="../includes/js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="../includes/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#inicio").button({
+                    icons: {
+                        primary: 'ui-icon-home'
+                    }
+                });
+            });
+        </script>
+        <style type="text/css">
+
+            html, body { height:100%;} 
+            body {
+                margin:0; 
+                padding:0;
+                text-align:center;
+                background-color: #e0eefc;
+            }
+            #tudo { 
+                width:1010px;
+                position:relative;  /*Contexto de posicionamento */
+                margin:0 auto;
+                text-align:left;
+                min-height:100%;
+                background-color: #FFF;
+            }
+            * html #tudo { height: 100%;}
+            #conteudo { padding-bottom:30px;}
+            #esquerdo{
+                width: 251px;
+                float: left;
+            }
+            #direito{
+                width: 752px;
+                float: left;
+            }
+            #topo_logo{
+                width: 250px;
+                float: left;
+            }            
+            #topo_principal{
+                /*position: absolute;
+                margin-left: 252px; */
+                margin-left: 3px;
+                width: 752px;
+                height: 150px;
+                float: left;
+                border: #0070a3 2px solid;
+                text-align: center;
+                padding-top: 20px;
+            }
+
+            #menu_e{
+                text-align: left;
+                float: left;
+                background-color: #74b2e2;
+                width: 243px;
+                padding: 5px 3px 2px 3px;
+                font-family: Tahoma, Verdana;
+                font-size: 19px;                
+                font-weight: bold;
+                color: #FFF;
+            }
+            #menu_i{
+                text-align: left;
+                width: 236px;
+                padding: 3px 0px 3px 7px;
+                font-family: Tahoma, Verdana;
+                font-size: 14px;
+                font-weight: normal;
+                background-color: #FFF;
+            }
+            #principal {
+                margin-left: 3px;
+                width: 752px;
+                height: 150px;
+                float: left;
+                text-align: center;
+                padding-top: 20px;
+            }
+            #produtos{
+                margin-left: 3px;
+                width: 372px;
+                height: 90px;
+                float: left;
+                text-align: left;
+                margin-bottom: 6px;
+            }
+            #produto_foto{
+                width: 90px;
+                height: 90px;
+                float: left;
+                text-align: left;
+            }
+            #produto_descricao{
+                width: 279px;
+                height: 90px;
+                float: left;
+                padding-left: 3px;
+                text-align: left;
+                font-family: Tahoma, Verdana;
+                font-size: 12px;
+            }
+            #rodape {
+                padding-top:3px;
+                width:100%;
+                height:15px;
+                position:absolute;
+                bottom:0px;
+                border:dotted #999;
+                border-width: 1px 0;
+                text-align:center;
+                font-family:Tahoma, Geneva, sans-serif;
+                font-size:10px;
+                font-weight:600;
+                background-color: #FFF;
+                opacity:0.65;
+                -moz-opacity: 0.65;
+                filter: alpha(opacity=65);
+
+            }
+            #rodape p {
+                margin:0;
+                font-weight:bold;
+                color:#000;
+            }
+            .clear { clear:both;}
+            a:link {text-decoration: none; color:#020;}
+            a:visited {text-decoration: none; color:#020;}
+            a:hover {text-decoration: underline; font-weight:bold; color:#020;}
+            a:active {text-decoration: none; color:#020;}
+            .canto {
+                z-index:10;
+                position: absolute;
+                left: 810px; 
+                padding-top:3px;
+                height:-45px;
+                position:absolute;
+                bottom:0px;
+            }
+            ul{
+                margin: 0 auto;
+                padding: 0;
+                text-decoration: none;
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="tudo">
+            <div id="conteudo">
+                <div id="esquerdo">
+                    <div id="topo_logo">
+                        <img src="../imagens/logo.png"/>
+                    </div>
+                    <br>
+                    <div id="menu_e" class="ui-corner-all">
+                        Cães & Gatos
+                        <div id="menu_i" class="ui-corner-all">
+                            <ul id="primary-nav">
+                                <li><a href="arranhadores.htm">Arranhadores</a></li>
+                                <li><a href="banheiro.htm">Banheiro</a></li>
+                                <li><a href="brinquedos.htm">Brinquedos</a> </li>
+                                <li><a href="caixadetransporte.htm">Caixas de Transporte</a> </li>
+                                <li><a href="camas.htm">Camas</a> </li>
+                                <li><a href="casas.htm">Casas</a></li>
+                                <li><a href="coleiraseguias.htm">Coleiras e Guias</a> </li>
+                                <li><a href="comedourosebebedouros.htm">Comedouros e Bebedouros</a> </li>
+                                <li><a href="focinheiras.htm">Focinheiras</a> </li>
+                                <li><a href="gradeseportoes.htm">Grades de Prote&ccedil;&atilde;o</a> </li>
+                                <li><a href="higieneebeleza.htm">Higiene e Beleza</a> </li>
+                                <li><a href="popgirls.htm">Pop Girls</a></li>
+                                <li><a href="tapetes.htm">Tapetes</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="direito">
+                    <div id="topo_principal" class="ui-corner-all"> 
+                        <br /><br />Novos produtos com uma pequena descrição.
+                    </div>
+
+                    <br>
+                    <div id="principal">
+                        <div id="produtos">
+                            <div id="produto_foto">
+                                <img src="../img_produtos/prod01.jpg" width="90" height="90">
+                            </div>
+                            <div id="produto_descricao">
+                                Cód.: 123456789<br />
+                                Nome do Produto<br />
+                                Dim. / Tam.: Não determinado<br />
+                            </div>
+                        </div>
+                        <div id="produtos">
+                            <div id="produto_foto">
+                                <img src="../img_produtos/prod02.jpg" width="90" height="90">
+                            </div>
+                            <div id="produto_descricao">
+                                Cód.: 123456789<br />
+                                Nome do Produto<br />
+                                Dim. / Tam.: Não determinado<br />
+                            </div>
+                        </div><div id="produtos">
+                            <div id="produto_foto">
+                                <img src="../img_produtos/prod03.jpg" width="90" height="90">
+                            </div>
+                            <div id="produto_descricao">
+                                Cód.: 123456789<br />
+                                Nome do Produto<br />
+                                Dim. / Tam.: Não determinado<br />
+                            </div>
+                        </div>
+                        <div id="produtos">
+                            <div id="produto_foto">
+                                <img src="../img_produtos/prod04.jpg" width="90" height="90">
+                            </div>
+                            <div id="produto_descricao">
+                                Cód.: 123456789<br />
+                                Nome do Produto<br />
+                                Dim. / Tam.: Não determinado<br />
+                            </div>
+                        </div>
+                        <div id="produtos">
+                            <div id="produto_foto">
+                                <img src="../img_produtos/prod04.jpg" width="90" height="90">
+                            </div>
+                            <div id="produto_descricao">
+                                Cód.: 123456789<br />
+                                Nome do Produto<br />
+                                Dim. / Tam.: Não determinado<br />
+                            </div>
+                        </div>
+                        <div id="produtos">
+                            <div id="produto_foto">
+                                <img src="../img_produtos/prod06.jpg" width="90" height="90">
+                            </div>
+                            <div id="produto_descricao">
+                                Cód.: 123456789<br />
+                                Nome do Produto<br />
+                                Dim. / Tam.: Não determinado<br />
+                            </div>
+                        </div>
+                    </div> <!-- Fim da div#principal -->
+                </div>
+                <div class="clear"></div>
+            </div> <!-- Fim da div#conteudo -->
+            <div class="canto"><img src="../imagens/logo_hachiinfo.png"></div>
+            <div id="rodape">
+                <p>Clonadi - Copyright &copy; 2014. Todos os direitos reservados.</p>
+            </div>
+        </div> <!-- Fim da div#tudo -->
+    </body>
+</html>

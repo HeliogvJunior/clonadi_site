@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+html, body { height:100%;} 
+body {
+    margin:0; 
+    padding:0;
+    text-align:center;
+    background-color: #c1dafe;
+}
+#tudo { 
+    width:1010px;
+    position:relative;  /*Contexto de posicionamento */
+    margin:0 auto;
+    text-align:left;
+    min-height:100%;
+    border:dotted #999;
+    border-width:0 1px;
+    background-color: #FFF;
+}
+* html #tudo { height: 100%;}
+#conteudo { background-color: #74b2e2; }
+#esquerdo{
+    width: 251px;
+    float: left;
+}
+#direito{
+    width: 750px;
+    float: left;
+    padding-bottom:65px;
+}
+#topo_logo{
+    width: 250px;
+    float: left;
+    padding-top: 3px;
+    padding-left: 2px;
+}            
+#topo_principal{
+    /*position: absolute;
+    margin-left: 252px; */
+    margin-left: 3px;
+    width: 750px;
+    height: 150px;
+    float: left;
+    border: #0070a3 2px solid;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#menu_e{
+    text-align: left;
+    float: left;
+    background-color: #74b2e2;
+    width: 243px;
+    padding: 5px 3px 2px 3px;
+    font-family: Tahoma, Verdana;
+    font-size: 19px;                
+    font-weight: bold;
+    color: #FFF;
+    margin-top: 5px;
+}
+#menu_i{
+    text-align: left;
+    width: 236px;
+    padding: 3px 0px 3px 7px;
+    font-family: Tahoma, Verdana;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #FFF;
+}
+#principal {
+    margin-left: 3px;
+    width: 752px;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+}
+#produtos{
+    margin-left: 3px;
+    width: 372px;
+    height: 90px;
+    float: left;
+    text-align: left;
+    margin-bottom: 6px;
+}
+#produto_foto{
+    width: 90px;
+    height: 90px;
+    float: left;
+    text-align: left;
+}
+#produto_descricao{
+    width: 279px;
+    height: 90px;
+    float: left;
+    padding-left: 3px;
+    text-align: left;
+    font-family: Tahoma, Verdana;
+    font-size: 12px;
+}
+#rodape {
+    padding-top:3px;
+    width:100%;
+    height:60px;
+    position:absolute;
+    bottom:0px;
+    border:dotted #999;
+    border-width: 1px 0;
+    text-align:center;
+    font-family:Tahoma, Geneva, sans-serif;
+    font-size:10px;
+    font-weight:600;
+    background-color: #FFF;
+    opacity:0.65;
+    -moz-opacity: 0.65;
+    filter: alpha(opacity=65);
+
+}
+#rodape p {
+    font-weight:bold;
+    color:#000;
+}
+.clear { clear:both;}
+a {text-decoration: none; color:#020;}
+a:hover {text-decoration: underline; font-weight:bold; color:#020;}
+.canto {
+    z-index: 999;
+    position: absolute;
+    left: 810px; 
+    height: -80px;
+    bottom: 2px;
+}
+ul{
+    margin: 0 auto;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+.img_prod{
+    max-height: 90px;
+    max-width: 90px;
+}
