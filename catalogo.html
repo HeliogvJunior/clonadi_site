@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Catálogo Clonadi 2011</title>
+<script src="includes/js/swfobject_modified.js" type="text/javascript"></script>
+<style type="text/css">
+#container {
+	margin:0 auto;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+.pagina {
+	position: relative;
+	float: left;
+}
+body {
+	background: url(imagens/layout/bgCentro.jpg);
+	font-family:"PT Sans", "Trebuchet MS", Verdana, Geneva, sans-serif;
+	font-size:13px;
+	line-height:18px;
+	color:#2f2f35;
+	min-height: 100%;
+        margin: 0 auto;
+}
+
+a img {
+	border: 0;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div id="container">
+	<div id="loading" style="position: absolute; left:47%;top:48%">
+		Carregando...
+	</div>
+	<div id="wrap">
+		<div class="pagina"></div>
+		<div class="pagina"><img src="imagens/catalogo/pg-1.jpg" alt="" /></div>
+		<div class="pagina"><img src="imagens/catalogo/pg-52.jpg" alt="" /></div>
+		<div class="pagina"><img src="imagens/catalogo/pg-2.jpg" alt="" /></div>
+		<div class="pagina"><img src="imagens/catalogo/pg-3.jpg" alt="" /></div>
+		<div id="pos_load">
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+			<div class="pagina"></div>
+		</div>
+		<div class="pagina"><img src="imagens/catalogo/pg-41.jpg" alt="" /></div>
+		<div class="pagina"><img src="imagens/catalogo/pg-52.jpg" alt="" /></div>
+		
+		<!--div class="pagina"><img src="imagens/catalogo/pg-28.jpg" alt="" /></div-->
+		<!--div class="pagina"><img src="imagens/catalogo/pg-50.jpg" alt="" /></div>
+		<div class="pagina"><img src="imagens/catalogo/pg-51.jpg" alt="" /></div-->
+	</div>
+</div>
+<a href="javascript: anterior();" style="position:absolute; left:75px; top:45%"><img src="imagens/btn_ant.png"></a>
+<a href="javascript: proximo();" style="position:absolute; right:75px; top:45%"><img src="imagens/btn_prox.png"></a>
+<script type="text/javascript">
+	
+var qtde_itens = 0;
+var conteudo;
+var qtde_clicks = 0;
+var largura_final = 0;
+var bloqueio=false;
+var largura=0;
+var altura = 0;
+
+function proximo(){
+	if(bloqueio==false){
+		
+		bloqueio = true;
+	
+		qtde_clicks++;
+		
+		if(qtde_clicks<qtde_itens){
+			$('#wrap').animate({
+			    marginLeft: '-='+largura
+			  }, 1000, function() {
+			});
+			
+		} else {
+			$('#wrap').animate({
+			    marginLeft: '-='+largura
+			  }, 1000, function() {
+			  	$('#wrap').css('marginLeft', '0px');
+			});
+			
+			
+			qtde_clicks=0;
+		}
+		setTimeout(function(){bloqueio=false;},1000);
+	}
+	//$('#footer').html(qtde_clicks);
+}
+
+function anterior(){
+	if(bloqueio==false){
+		bloqueio=true;
+		qtde_clicks--;
+		//alert(qtde_clicks);
+		
+		//qtde_volta = 0 -qtd_itens;
+		
+		if(qtde_clicks<0){
+			inicio = 0 - ((largura_final / 2));
+			//alert(inicio);
+			$('#wrap').css('marginLeft', (inicio) + 'px');
+			$('#wrap').animate({
+			    marginLeft: '+='+largura
+			  }, 1000, function() {
+			});
+		
+			
+			qtde_clicks = qtde_itens - 1;
+			
+		} else {
+			$('#wrap').animate({
+			    marginLeft: '+='+largura
+			  }, 1000, function() {
+			});
+		}
+		setTimeout(function(){bloqueio=false;},1000);
+	}
+	
+	
+	//$('#footer').html(qtde_clicks);
+	
+}
+
+$(document).ready(function(){
+	if($(window).height() > 450){
+		largura = ($(window).height() - 20) * 1.403508771929825;
+	} else {
+		largura = 450 * 1.403508771929825;
+	}
+	
+	largura = parseInt(largura);
+	meia_largura = parseInt(largura/2);
+	
+	largura = meia_largura * 2;
+	altura = parseInt(largura / 1.403508771929825);
+	
+	$(".pagina").width(meia_largura);
+	$(".pagina").height(altura);
+	$(".pagina img").width(meia_largura);
+	$("#container").height(altura);
+	$("#container").width(largura);
+	
+	$('#wrap').fadeTo(0,0);
+	qtde_itens = $('.pagina').size();
+	conteudo = $('#wrap').html();
+	largura_final = largura * qtde_itens;
+	$('#wrap').width(largura_final);
+	$('#wrap').hide(0);
+	
+	//alert(largura);
+});
+
+$(window).load(function() {
+	$('#wrap').fadeTo(500, 1);
+	$('#wrap').html(conteudo+conteudo);
+	$('#loading').hide(0);
+	$('#wrap').show(0);
+	
+	html_pos = '<div class="pagina"><img src="imagens/catalogo/pg-4.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-5.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-6.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-7.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-9.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-8.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-10.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-12.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-13.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-14.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-15.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-16.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-17.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-18.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-19.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-20.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-21.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-22.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-23.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-24.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-25.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-26.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-27.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-31.jpg" alt="" /></div><div class="pagina"><img src="imagens/catalogo/pg-34.jpg" alt="" /></div>';
+	$('#pos_load').html(html_pos);
+	$(".pagina img").height(altura);
+	$(".pagina img").width(meia_largura);
+});
+
+$(window).keydown(function(event){
+	var tecla = event.keyCode;
+	
+	if (tecla == 37 || tecla == 40){
+		anterior();
+	}
+	
+	if (tecla == 39 || tecla == 38){
+		proximo();
+	}
+});
+
+$(window).resize(function() {
+	
+	location.reload();
+	
+});
+
+
+
+	/*$(window).load(function(){
+		largura = $(window).height() * 1.413937867338371;
+		//alert(largura);
+		$("#FlashID").width(largura/2);
+		$("#container").width(largura);
+		$("#FlashID").height($(window).height());
+		
+	});*/
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29898807-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

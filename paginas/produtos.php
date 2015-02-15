@@ -6,7 +6,7 @@
 //$func = new funcoes();
 
 
-$idMenu = $_GET['idmenu'];
+$idMenu = $_GET['menu'];
 $func->produtosItens($pdo, $smt, $idMenu);
 //$smt->assign("resPro", "Lepo Lepo");
 //$func->teste($smt);

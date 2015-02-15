@@ -11,16 +11,23 @@
                 <script type="text/javascript" src="/includes/js/jquery-1.9.1.min.js"></script>
                 <script type="text/javascript" src="/includes/js/jquery-ui-1.10.3.custom.min.js"></script>
                 <script type="text/javascript">
-                    $(document).ready(function() {
+                    $(document).ready(function () {
                         $("#inicio").button({
                             icons: {
                                 primary: 'ui-icon-home'
                             }
                         });
+                        $(".btnCarrinho").button({
+                            icons: {
+                                primary: 'ui-icon-cart'
+                            }
+                        });
                     });
                 </script>
                 <style type="text/css">
-
+                    .btnCarrinho{
+                        font-size: 10px;
+                    }
                 </style>
                 </head>
                 <body>
@@ -29,7 +36,7 @@
                             <div id="topo_logo">
                                 <a href="/0/0/inicio.html" title="Página Inicial"><img src="/imagens/logo.png"/></a>
                             </div>
-                            <br><br>
+                            <br><a href="/0/0/carrinho.html" class="btnCarrinho">Carrinho</a><br>
                                     <div id="menu_e" class="ui-corner-all">
                                         {include file="menu_e.tpl"}
                                     </div>

@@ -89,6 +89,7 @@ class funcoes {
                 $imagem_prod[] = $produtos->imagem;
                 $tipo_animal_prod[] = $produtos->tipo_animal;
                 $garantia_prod[] = $produtos->garantia;
+                $id_categoria[] = $produtos->id_categoria;
             }
             $smt->assign("resIdProduto", $id_prod);
             $smt->assign("resNomeProduto", $nome_prod);
@@ -96,6 +97,7 @@ class funcoes {
             $smt->assign("resImagemProduto", $imagem_prod);
             $smt->assign("resTipoProduto", $tipo_animal_prod);
             $smt->assign("resGarantiaProduto", $garantia_prod);
+            $smt->assign("resMenu", $id_categoria);
             
         } catch (PDOException $erro_busca_produto) {
             echo 'Erro ao efetuar a Consulta: ' . $erro_busca_produto->getMessage();
@@ -126,6 +128,18 @@ class funcoes {
         } catch (PDOException $erro_busca_produto) {
             echo 'Erro ao efetuar a Consulta: ' . $erro_busca_produto->getMessage();
         }
+    }
+    function produtoCarrinho($pdo, $smt, $idproduto) {
+        try {
+            $sql_busca_produtos = "select * from hi_produtos WHERE idprodutos = $idproduto";
+            $query_produtos = $pdo->prepare($sql_busca_produtos);
+            $query_produtos->execute();
+            $produtos = $query_produtos->fetchObject();    
+            
+        } catch (PDOException $erro_busca_produto) {
+            echo 'Erro ao efetuar a Consulta: ' . $erro_busca_produto->getMessage();
+        }
+        return $produtos;
     }
 }
 

@@ -1,6 +1,6 @@
 <?php
 try {
-    $sql_busca_categoria = "select * from categoria order by categoria asc";
+    $sql_busca_categoria = "select * from hi_categoria order by categoria asc";
     $query_categoria = $pdo->prepare($sql_busca_categoria);
     $query_categoria->execute();
     

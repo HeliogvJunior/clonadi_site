@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Clonadi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script language="javascript">
+            var win = null;
+            function NovaJanela(pagina, nome, w, h, scroll) {
+                LeftPosition = (screen.width) ? (screen.width - w) / 2 : 0;
+                TopPosition = (screen.height) ? (screen.height - h) / 2 : 0;
+                settings = 'height=' + h + ',width=' + w + ',top=' + TopPosition + ',left=' + LeftPosition + ',scrollbars=' + scroll + ',resizable'
+                win = window.open(pagina, nome, settings);
+            }
+        </script>
+        <style type="text/css">
+            html, body {height:100%;}
+            body{
+                margin: 0;
+                padding:0;
+                background: #ffffff;
+                text-align:center;
+                font-family:Arial;
+            }
+            #site{
+                width:1005px;
+                position:relative;
+                margin:0 auto;
+                text-align:left;
+                min-height:100%;
+
+            }
+            * html #site{
+                height:100%;
+            }
+            #topo{
+                height: 220px;
+                width: 100%;
+                text-align: center;
+                float: left;
+            }
+            #conteudo{
+                float: left;
+                padding-bottom:20px;
+            }
+            #principal{
+                width:1005px;
+                height: 300px;
+                float:left;
+                text-align: center;
+                font-family: Arial;
+                font-size: 40px;
+            }
+            .clear {clear:both;}
+            #rodape{
+                padding-top:3px;
+                width:100%;
+                height:17px;
+                position:absolute;
+                bottom:0px;
+                text-align:center;
+                font-family:Arial;
+                color:#000;
+                font-size:12px;
+                font-weight: bold;
+
+                background-color: #FFF;
+                opacity:0.65;
+                -moz-opacity: 0.65;
+                filter: alpha(opacity=65);
+            }
+            a:link {text-decoration: none; color:#020;}
+            a:visited {text-decoration: none; color:#020;}
+            a:hover {text-decoration: underline; font-weight:bold; color:#020;}
+            a:active {text-decoration: none; color:#020;}
+            .canto {
+                z-index:9;
+                position: absolute;
+                left: 800px; top:91%;
+                width: 200px; height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="site">
+            <div id="topo">
+                <img src="imagens/clonadi_grande.png" width="781" height="206" >
+            </div>
+            <div id="conteudo">   
+                <div id="principal"> 
+                    <div style="float: left; width: 450px; height: 300px;">
+			    <a href="CLONADI_CATALOGO_2014.pdf">
+                            <img src="imagens/capa.jpg" width="212" height="300" />
+                        </a>
+                    </div>
+                    <div style="float: left; width: 550px; height: 300px;">
+                        <br />
+                        Fone: 11 | 2243-6600
+                        <br />
+                        contato@clonadi.com.br
+                        <br /><br />
+                        Site em Atualização!
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="clear">&nbsp; </div> 
+            <div id="rodape">CClonadi - Copyright &copy; 2014. Todos os direitos reservados.</div>
+            <div class="canto"><img src="imagens/logo_hachiinfo.png"></div>
+        </div>
+    </body>
+</html>
