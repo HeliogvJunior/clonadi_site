@@ -31,7 +31,7 @@ $mensagem   = '<!DOCTYPE html>
         <img src="http://www.clonadi.com.br/imagens/topo_email.png" />
         <br />
         <br />
-        Ola '.$contato.',
+        Ola '. $contato .',
         <br />
         <br />
         Recebemos a sua solicitção de orçamento.
